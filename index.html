@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simplex method resolver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+              integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+              crossorigin="anonymous">
+        <link rel="Stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="Stylesheet" href="style.css" />
+    </head>
+    <body>
+        <section class="container marginTop">
+            <div class="row first-step">
+                <div class="col-sm-3">
+                    Cuantas variables de deciciones tiene?
+                </div>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" id="vdnum"/>
+                </div>
+            </div>
+            
+            <div class="row first-step marginTop">
+                <div class="col-sm-1">
+                    Tipo
+                </div>
+                <div class="col-sm-11">
+                    <select id="type" class="form-control">
+                        <option value="true">Max</option>
+                        <option value="false">Min</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row first-step marginTop">
+                <div class="col text-center">
+                    <button id="btn_vdnum" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+
+            <div class="row second-step d-none" id="row_function">
+                <div class="col-sm-2">Funccion:</div>
+            </div>
+
+            <div class="row second-step d-none">
+                <div class="col-sm-12 text-center" style="margin-top: 30px">
+                    <h4>Restricciones</h4>
+                </div>
+            </div>
+
+            <div id="row_constraints" class="second-step d-none marginTop">
+            </div>
+
+
+            <div class="row second-step d-none">
+                <div class="col text-center">
+                    <a href="#" id="btn_new_constraint"><i class="fa fa-plus-circle fa-2x"></i></a>
+                </div>
+            </div>
+
+            <div class="row marginTop second-step d-none">
+                <div class="col-sm-12 text-center">
+                    <button class="btn btn-dark" id="btn_constraint_ok">Ok</button>
+                </div>
+            </div>
+
+            <div class="row marginTop third-step d-none">
+                <div class="col">
+                    <h4 class="text-center">Transformación</h4>
+                </div>
+                <div class="col col-sm-12 text-center" id="new-function">
+                    Función: 
+                </div>
+
+                <div class="col col-sm-12 text-center marginTop">
+                    <h4>Restricciones</h4> 
+                </div>
+            </div>
+
+            <div id="row_constraints_normalized" class="third-step d-none marginTop"></div>
+
+            <div id="tables_container" class="marginTop third-step d-none"></div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
